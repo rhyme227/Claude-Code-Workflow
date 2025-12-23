@@ -5,7 +5,8 @@
   "type": "module",
   "main": "ccw/src/index.js",
   "bin": {
-    "ccw": "./ccw/bin/ccw.js"
+    "ccw": "./ccw/bin/ccw.js",
+    "ccw-mcp": "./ccw/bin/ccw-mcp.js"
   },
   "scripts": {
     "start": "node ccw/bin/ccw.js",

@@ -949,11 +949,11 @@ function setCcwProjectRootToCurrent() {
 // Uses globally installed ccw-mcp command (from claude-code-workflow package)
 function buildCcwToolsConfig(selectedTools, pathConfig = {}) {
   const { projectRoot, allowedDirs } = pathConfig;
-  // Use globally installed ccw-mcp command directly
-  // Requires: npm install -g claude-code-workflow
+  // Use npx to execute ccw-mcp from the package
+  // This works without requiring global installation
   const config = {
-    command: "ccw-mcp",
-    args: []
+    command: "npx",
+    args: ["-y", "ccw-mcp"]
   };
 
   // Add env if not all tools or not default 4 core tools
